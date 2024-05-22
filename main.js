@@ -44,4 +44,12 @@ $(document).ready(function () {
             }, 1000);
         })
     })
+
+    $('#formulario-pedido').submit(function (evento) {
+        evento.preventDefault();
+        
+        if ($('#nome').val().lenght == 0) {
+            throw new Error('Digite o nome');
+        }
+    })  
 })
